@@ -49,5 +49,5 @@ Twitter.configure do |config|
   config.oauth_token        = keys['oauth_token']
   config.oauth_token_secret = keys['oauth_token_secret']
 end
-puts tweet
-# Twitter.update tweet
+
+Twitter.update tweet
