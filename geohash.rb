@@ -23,6 +23,7 @@ end
 
 date  = Date.today
 dow   = Net::HTTP.get "carabiner.peeron.com", "/xkcd/map/data/#{date.strftime "%Y/%m/%d"}"
+raise StandardError, "no dow closing available yet" if dow.length > 20
 md5   = Digest::MD5.hexdigest "#{date.strftime "%Y-%m-%d-"}" + dow
 md51  = md5[0, 16]
 md52  = md5[16, 31]
