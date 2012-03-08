@@ -4,7 +4,7 @@ require 'twitter'
 require 'net/https'
 require 'digest/md5'
 
-keys = YAML::load( File.open( 'config.yml' ) )
+keys = YAML::load( File.open( './config.yml' ) )
 
 def hexFracToDecFrac(hexFracPart)
 	fracLen = hexFracPart.length
