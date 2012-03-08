@@ -1,6 +1,0 @@
-consumer_key: YOUR_KEY
-consumer_secret: YOUR_SECRET
-oauth_token: YOUR_TOKEN
-oauth_token_secret: YOUR_TOKEN_SECRET
-lat: YOUR_GRATICULE_LATITUDE
-long: YOUR_GRATICULE_LONGITUDE
