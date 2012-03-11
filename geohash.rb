@@ -37,7 +37,7 @@ https.verify_mode = OpenSSL::SSL::VERIFY_PEER
 https.ca_path = '/etc/ssl/certs' if File.exists?('/etc/ssl/certs') # Ubuntu
 path = "/maps/api/place/search/json?location=#{lat},#{long}&radius=5000&sensor=false&key=AIzaSyBf6VsyAL-Kp78H-OVvZbTGGSZwO-x0KLI"
 response = https.request_get(path)
-puts path
+
 json = JSON[response.read_body]
 
 vicinity  = "the middle of nowhere"
