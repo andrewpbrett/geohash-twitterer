@@ -37,10 +37,13 @@ https.verify_mode = OpenSSL::SSL::VERIFY_PEER
 https.ca_path = '/etc/ssl/certs' if File.exists?('/etc/ssl/certs') # Ubuntu
 path = "/maps/api/place/search/json?location=#{lat},#{long}&radius=5000&sensor=false&key=AIzaSyBf6VsyAL-Kp78H-OVvZbTGGSZwO-x0KLI"
 response = https.request_get(path)
-
+puts path
 json = JSON[response.read_body]
-vicinity  = json['results'][0]['vicinity']
-name      = json['results'][0]['name']
+
+vicinity  = "the middle of nowhere"
+name      = "nothing"
+vicinity  = json['results'][0]['vicinity'] if json['results'] != []
+name      = json['results'][0]['name']     if json['results'] != []
 
 tweet = "Today's geohash: #{lat}, #{long} - near #{name} in #{vicinity}: http://maps.google.com/maps?q=#{lat},#{long}"
 
