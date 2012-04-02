@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Geohash-twitterer by andrewpbrett</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Geohash-twitterer</h1>
+        <p>Posts XKCD geohash locations to twitter for a given graticule</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/andrewpbrett/geohash-twitterer" class="button fork"><strong>Fork On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/andrewpbrett/geohash-twitterer/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/andrewpbrett/geohash-twitterer/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h3>Geohash twitterer</h3>
+
+<h4>About</h4>
+
+<p><a href="http://wiki.xkcd.com/geohashing/Main_Page">Geohashing</a></p>
+
+<h4>Instructions</h4>
+
+<p><a href="https://dev.twitter.com/apps/new">Register an app</a> with twitter, making sure to specify Read + Write access</p>
+
+<p>Clone this repo and add a config.yml file in the root directory with the following info for your app and graticule: </p>
+
+<pre><code>consumer_key: YOUR_CONSUMER_KEY
+consumer_secret: YOUR_CONSUMER_SECRET
+oauth_token: YOUR_OAUTH_TOKEN
+oauth_token_secret: YOUR_OAUTH_TOKEN_SECRET
+lat: YOUR_GRATICULE_LATITUDE
+long: YOUR_GRATICULE_LONGITUDE
+</code></pre>
+
+<p><code>gem install twitter</code></p>
+
+<p><code>ruby geohash.rb</code></p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/andrewpbrett">andrewpbrett</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>
